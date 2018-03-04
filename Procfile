@@ -1,1 +1,1 @@
-web: gunicorn gettingstarted.wsgi 
+web: gunicorn movie-app:movie-app
