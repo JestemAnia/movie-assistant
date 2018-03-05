@@ -12,7 +12,7 @@ rh = RequestHandler()
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
-    return rh.handle_request(request.get_json())
+    return rh.handle_request(request.get_json()).toJSON()
 
 
 # @app.route('/movie/best', methods=['POST'])

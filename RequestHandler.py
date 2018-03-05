@@ -1,4 +1,5 @@
 from FilmwebService import FilmwebService
+from Response import Response
 
 class RequestHandler:
 
@@ -9,6 +10,6 @@ class RequestHandler:
     def handle_request(self, request):
         action = request['result']['action']
         if action == 'movie.best':
-            return self.filmweb_service.get_best_movie()
+            return Response(self.filmweb_service.get_best_movie())
         elif action == 'movie.poster':
-            return self.filmweb_service.get_movie_poster(request['result']['resolvedQuery'])
+            return Response(self.filmweb_service.get_movie_poster(request['result']['resolvedQuery']))
