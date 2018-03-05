@@ -1,1 +1,1 @@
-web: gunicorn movie-assistant:movie-app
+web: gunicorn movie-app:app --log-file=-
