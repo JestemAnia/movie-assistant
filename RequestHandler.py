@@ -10,6 +10,6 @@ class RequestHandler:
     def handle_request(self, request):
         action = request['result']['action']
         if action == 'movie.best':
-            return Response(self.filmweb_service.get_best_movie())
+            return Response(self.filmweb_service.get_best_movie(), request)
         elif action == 'movie.poster':
-            return Response(self.filmweb_service.get_movie_poster(request['result']['resolvedQuery']))
+            return Response(self.filmweb_service.get_movie_poster(request['result']['resolvedQuery']), request)

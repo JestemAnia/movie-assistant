@@ -2,7 +2,6 @@ from flask import Flask
 from flask import request
 from flask import json
 from flask import jsonify
-
 from RequestHandler import RequestHandler
 
 app = Flask(__name__)
