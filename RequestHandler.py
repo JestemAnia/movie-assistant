@@ -12,4 +12,4 @@ class RequestHandler:
         if action == 'movie.best':
             return Response(self.filmweb_service.get_best_movie(), request)
         elif action == 'movie.poster':
-            return Response(self.filmweb_service.get_movie_poster(request['result']['resolvedQuery']), request)
+            return Response(self.filmweb_service.get_movie_poster(request['fulfillment']['speech']), request)
