@@ -15,7 +15,9 @@ rh = RequestHandler()
 def webhook():
     json = request.get_json()
     app.logger.info("Got request message = {%s}", json)
-    return rh.handle_request(json)
+    response = rh.handle_request(json)
+    app.logger.info("sending response = {%s}", response)
+    return response
 
 
 if __name__ == '__main__':
